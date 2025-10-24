@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background: linear-gradient(180deg, #7c4cc2, #b28ef0);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.title {
+  background: rgba(255,255,255,0.2);
+  padding: 10px 0;
+  border-radius: 10px;
+  font-style: italic;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  background: url('3744ae25-b75c-404e-a8fb-ccc8d87dcb17.png') center/cover no-repeat;
+  border-radius: 15px;
+  padding: 30px;
+  border: 3px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+label {
+  color: white;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  background: rgba(255,255,255,0.6);
+}
+
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.row .input-group {
+  flex: 1;
+}
+
+.btn {
+  background: rgba(255,255,255,0.3);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.1em;
+  font-style: italic;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.link {
+  margin-top: 10px;
+  color: white;
+}
+
+.link a {
+  color: #f4eaff;
+  text-decoration: underline;
+}
+
+.jelly-left, .jelly-right {
+  position: absolute;
+  width: 150px;
+  opacity: 0.9;
+  animation: float 6s ease-in-out infinite;
+}
+
+.jelly-left {
+  top: -60px;
+  left: -50px;
+  animation-delay: 0s;
+}
+
+.jelly-right {
+  bottom: -70px;
+  right: -40px;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@media screen and (max-width: 700px) {
+  .row { flex-direction: column; }
+  .jelly-left, .jelly-right { width: 100px; }
+}
